@@ -1,5 +1,6 @@
-# IntroJS
-Katas introducción JS
+# KEEPCODING IntroJS
+
+Ejercicios de introducción a Javascript
 
 # Primera Kata
 ## FooBarQuix
