@@ -41,52 +41,61 @@ Sólo se contemplan números entre el 1 y el 3999
 
 console.log('Arab to Roman number converter');
 
-function arabToRoman(n) {
+try {
 
-    console.log('Arab number: ' + n);
+    function arabToRoman(n) {
     
-
-    let result = '';
-
-    let basicRules = {
-
-        M: 1000,
-        CM: 900,
-        D: 500,
-        CD: 400,
-        C: 100,
-        XC: 90,
-        L: 50,
-        XL: 40,
-        X: 10,
-        IX: 9,
-        V: 5,
-        IV: 4,
-        I: 1
-    }
+        console.log('Arab number: ' + n);
+        
     
-    if( (n < 1) || (n > 3999)){
-
-        console.log('Please, write a number between 1 and 3999');
-
-    }else{
+        let result = '';
+    
+        let basicRules = {
+    
+            M: 1000,
+            CM: 900,
+            D: 500,
+            CD: 400,
+            C: 100,
+            XC: 90,
+            L: 50,
+            XL: 40,
+            X: 10,
+            IX: 9,
+            V: 5,
+            IV: 4,
+            I: 1
+        }
         
-            while (n > 0 ) {
-        
-                for ( var [key, value] of Object.entries(basicRules)){
-        
-                    if (n >= [value]) {
-                        n = n - value;
-                        result = result + key;
-                        break;
-                    }     
-                }  
-            }
-            return console.log('Is ' + result + ' in Roman');
-    }
+        if( (n < 1) || (n > 3999)){
+    
+            console.log('Please, write a number between 1 and 3999');
+    
+        }else{
+            
+                while (n > 0 ) {
+            
+                    for ( var [key, value] of Object.entries(basicRules)){
+            
+                        if (n >= [value]) {
+                            n = n - value;
+                            result = result + key;
+                            break;
+                        }     
+                    }  
+                }
+                return console.log('Is ' + result + ' in Roman');
+        }
+    
+    
+    };
+    
+    arabToRoman(400);
+    
+} catch (error) {
 
+    return console.log('An error has ocurred');
+    
+}
 
-};
-
-arabToRoman(4000);
 
