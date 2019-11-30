@@ -39,7 +39,7 @@ Sólo se contemplan números entre el 1 y el 3999
 
 */
 
-
+console.log('Arab to Roman number converter');
 
 function arabToRoman(n) {
 
@@ -65,21 +65,28 @@ function arabToRoman(n) {
         I: 1
     }
     
-    while (n > 0 ) {
+    if( (n < 1) || (n > 3999)){
 
-        for ( var [key, value] of Object.entries(basicRules)){
+        console.log('Please, write a number between 1 and 3999');
 
-            if (n >= [value]) {
-                n = n - value;
-                result = result + key;
-                break;
-            }     
-        }  
+    }else{
+        
+            while (n > 0 ) {
+        
+                for ( var [key, value] of Object.entries(basicRules)){
+        
+                    if (n >= [value]) {
+                        n = n - value;
+                        result = result + key;
+                        break;
+                    }     
+                }  
+            }
+            return console.log('Is ' + result + ' in Roman');
     }
 
 
-    return console.log('Is ' + result + ' in romans');
 };
 
-arabToRoman(2399);
+arabToRoman(4000);
 
