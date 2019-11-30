@@ -39,11 +39,17 @@ Sólo se contemplan números entre el 1 y el 3999
 
 */
 
+
+
 function arabToRoman(n) {
 
-    let result;
+    console.log('Arab number: ' + n);
+    
+
+    let result = '';
 
     let basicRules = {
+
         M: 1000,
         CM: 900,
         D: 500,
@@ -58,18 +64,22 @@ function arabToRoman(n) {
         IV: 4,
         I: 1
     }
+    
+    while (n > 0 ) {
 
-    if( n < 1 || n > 3999){
+        for ( var [key, value] of Object.entries(basicRules)){
 
-        console.log('Please use only numbers between 1 and 3999');
+            if (n >= [value]) {
+                n = n - value;
+                result = result + key;
+                break;
+            }     
+        }  
     }
 
 
+    return console.log('Is ' + result + ' in romans');
+};
 
-
-
-
-
-}
-
+arabToRoman(2399);
 
