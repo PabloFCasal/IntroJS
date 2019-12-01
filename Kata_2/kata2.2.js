@@ -62,9 +62,7 @@ function romanToArab(romanNumber) {
 
         key = romanNumber[0];
         numericValue = seeker(key);
-        console.log(key);
-        console.log(numericValue);
-         
+
         arabNumber += numericValue;
         romanNumber.shift();
     };
@@ -73,4 +71,6 @@ function romanToArab(romanNumber) {
 };
 
 
-console.log("The Roman number MMMMXCII equals " + romanToArab('MMMMXCII'))
+
+let romanNumber = "MCMLXXVIII";
+console.log(`The Roman number ${romanNumber} equals to: ` + romanToArab(`${romanNumber}`))
