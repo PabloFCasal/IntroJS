@@ -2,7 +2,7 @@
 
 // * Crear una función para pasar de número romanos a árabes
 
-
+'use strict';
 
 function arabToRoman(n) {
      
@@ -48,5 +48,6 @@ function arabToRoman(n) {
 
 };
 
-console.log("1958 in Roman numerals is " + arabToRoman(1958));
-console.log("2020 in Roman numerals is " + arabToRoman(2020));
+let arabNumber = 1978;
+
+console.log(`${arabNumber} in Roman numerals is: ` + arabToRoman(`${arabNumber}`));
